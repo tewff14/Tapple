@@ -108,6 +108,7 @@ class tapple {
 
 
     play(sec) {
+        countDownSound.play();
         this.enableAnswerButtons();
         this.#middleButton.disabled = true;
         this.#timer = 0;
@@ -115,6 +116,7 @@ class tapple {
         let answerArrayBefore = this.checkAnswer().slice(0);
         const tempIn = setInterval(() => {
             if (this.checkAnswer().length > answerArrayBefore.length) {
+                countDownSound.pause();
                 console.log(this.checkAnswer());
                 this.#middleButton.disabled = false;
                 clearInterval(tempIn);
@@ -125,6 +127,8 @@ class tapple {
         }, 1000);
 
         const tempTimeOut = setTimeout(() => {
+            countDownSound.pause();
+            gameOverSound.play();
             clearInterval(tempIn);
             this.#middleButton.disabled = false;
             this.displayGameOver(3);
