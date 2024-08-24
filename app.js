@@ -121,7 +121,7 @@ class tapple {
                 clearTimeout(tempTimeOut);
             }
             this.#timer++;
-            this.#h1.innerText = `Timer: ${this.#timer} `;
+            this.#h1.innerText = `Timer: ${this.#timer}chec `;
         }, 1000);
 
         const tempTimeOut = setTimeout(() => {
@@ -188,7 +188,7 @@ tapple1.disabledAnswerButtons();
 
 answers.forEach(function (answer) {
     answer.addEventListener("change", function () {
-        buttonSound.play();
+        answerButtonSound.play();
         tapple1.updateAlphabetsByOrder(answer.id);
         tapple1.updateAlphabets();
         answer.disabled = true;
