@@ -116,7 +116,6 @@ class tapple {
         let answerArrayBefore = this.checkAnswer().slice(0);
         const tempIn = setInterval(() => {
             if (this.checkAnswer().length > answerArrayBefore.length) {
-                countDownSound.pause();
                 console.log(this.checkAnswer());
                 this.#middleButton.disabled = false;
                 clearInterval(tempIn);
@@ -193,6 +192,7 @@ tapple1.disabledAnswerButtons();
 answers.forEach(function (answer) {
     answer.addEventListener("change", function () {
         answerButtonSound.play();
+        countDownSound.pause();
         tapple1.updateAlphabetsByOrder(answer.id);
         tapple1.updateAlphabets();
         answer.disabled = true;
