@@ -43,7 +43,13 @@ function createOrbitE(element, num, content) {
         // orbitLabel.style.transition = "transform 3s";
         // orbitElement.style.transition = "transform 3s";
 
-        orbitElement.style.transform = `translateY(${-26 * Math.cos(rad * (i))}em) translateX(${Math.sin(rad * (i)) * 26}em) rotate(${degree * i}deg)`
-        orbitLabel.style.transform = `translateY(${-22 * Math.cos(rad * (i))}rem) translateX(${Math.sin(rad * (i)) * 22}rem) rotate(${degree * i}deg)`
+
+
+
+
+
+        orbitElement.style.cssText = `transform: translateY(${-300 * Math.cos(rad * (i))}px) translateX(${Math.sin(rad * (i)) * 300}px) rotate(${degree * i}deg)`;
+        orbitLabel.style.cssText = `transform: translateY(${-300 * Math.cos(rad * (i))}px) translateX(${Math.sin(rad * (i)) * 300}px) rotate(${degree * i}deg)`;
+
     }
 }

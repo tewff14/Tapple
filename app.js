@@ -26,6 +26,7 @@ class tapple {
         let tempA = [];
         localStorage.setItem("answerList", JSON.stringify(tempA));
         this.clearAllTimeOutInterval();
+        this.#middleButton.disabled = false;
 
     }
 
