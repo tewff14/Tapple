@@ -188,6 +188,7 @@ tapple1.disabledAnswerButtons();
 
 answers.forEach(function (answer) {
     answer.addEventListener("change", function () {
+        buttonSound.play();
         tapple1.updateAlphabetsByOrder(answer.id);
         tapple1.updateAlphabets();
         answer.disabled = true;
