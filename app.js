@@ -50,7 +50,7 @@ class tapple {
     }
 
     randomAnswerButtons() {
-        let shuffledAlphabet = shuffleArray(letters.slice(0, 26));
+        let shuffledAlphabet = shuffleArray(letters.slice(0, answers.length));
         localStorage.setItem("order", JSON.stringify(shuffledAlphabet)); //remember order of answer button 
         for (let i = 0; i < answers.length; i++) {
             this.#answerButtons[i].id = shuffledAlphabet[i];
