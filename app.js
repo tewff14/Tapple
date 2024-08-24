@@ -203,6 +203,7 @@ randomButton.addEventListener("click", function () {
 
 reset.addEventListener("click", () => {
     tapple1.reset();
+    middle.disabled = false;
 });
 
 check.addEventListener("click", () => {
@@ -211,6 +212,7 @@ check.addEventListener("click", () => {
 
 
 middle.addEventListener("click", function () {
+    console.log("game start");
     tapple1.play(10);
 });
 
