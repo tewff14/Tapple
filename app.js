@@ -18,6 +18,7 @@ class tapple {
             button.disabled = true;
         })
         //reset timer
+        countDownSound.pause();
         this.#timer = 0;
         this.#h1.innerText = `Timer: ${this.#timer}`;
         this.#h2.innerText = `Used Alphabets: `;
@@ -56,7 +57,6 @@ class tapple {
             this.#answerLabels[i].setAttribute("for", shuffledAlphabet[i]);
             this.#answerLabels[i].innerText = shuffledAlphabet[i];
         }
-        this.reset();
     }
 
     checkAnswer() {
@@ -204,6 +204,7 @@ answers.forEach(function (answer) {
 
 randomButton.addEventListener("click", function () {
     tapple1.randomAnswerButtons();
+    tapple1.reset();
 });
 
 
