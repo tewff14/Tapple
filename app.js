@@ -121,7 +121,7 @@ class tapple {
                 clearTimeout(tempTimeOut);
             }
             this.#timer++;
-            this.#h1.innerText = `Timer: ${this.#timer}chec `;
+            this.#h1.innerText = `Timer: ${this.#timer}`;
         }, 1000);
 
         const tempTimeOut = setTimeout(() => {
