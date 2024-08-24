@@ -214,6 +214,7 @@ check.addEventListener("click", () => {
 
 
 middle.addEventListener("click", function () {
+    middleButtonSound.play();
     console.log("game start");
     tapple1.play(10);
 });

@@ -3,7 +3,8 @@ let letters = (() => {
     return caps.concat(caps.map(letter => letter.toLowerCase()));
 })();
 
-let buttonSound = new Audio("sound/answerButtonSound.mp3");
+let answerButtonSound = new Audio("sound/answerButtonSound.mp3");
+let middleButtonSound = new Audio("sound/middleButtonSound.mp3");
 
 
 
